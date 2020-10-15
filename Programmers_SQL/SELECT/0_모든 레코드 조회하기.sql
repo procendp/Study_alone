@@ -1,0 +1,1 @@
+select * from AIMAL_INS
