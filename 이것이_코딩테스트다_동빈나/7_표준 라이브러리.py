@@ -11,9 +11,49 @@
 
 
 
+
+
 # sum()
 # min(), max()
 
 # eval() - 중위표기법 시 사용
 result = eval("(3+7+4)*3")
+print(result)
+
+# sorted()
+# sorted() with key
+
+
+# 순열, 조합
+# 순열 : nPr = n * (n-1) * (n-2) ... * (n-r+1) ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+from itertools import permutations
+
+data = ['A', 'B', 'C'] # 데이터 준비
+
+result = list(permutations(data, 3)) # 모든 순열 구하기
+print(result) # [('A', 'B', 'C'), ('A', 'C', 'B'), ('B', 'A', 'C'), ('B', 'C', 'A'), ('C', 'A', 'B'), ('C', 'B', 'A')]
+
+# 조합 : nCr = n * (n-1) * (n-2) ... * (n-r+1) / r! ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+from itertools import combinations
+
+data = ['A', 'B', 'C']
+
+result = list(combinations(data, 2)) # 2개를 뽑는 조합
+print(result) # [('A', 'B'), ('A', 'C'), ('B', 'C')]
+
+
+# 중복 순열
+from itertools import product
+
+data = ['A', 'B', 'C'] # 데이터 준비
+
+result = list(product(data, repeat=2)) # 2개를 뽑는 모든 순열 구하기 (중복 허용)
+print(result)
+
+# 중복 조합
+from itertools import combinations_with_replacement
+
+data = ['A', 'B', 'C'] # 데이터 준비
+
+result = list(combinations_with_replacement(data, 2)) # 2개를 뽑는 모든 조합 구하기 (중복 허용)
 print(result)
