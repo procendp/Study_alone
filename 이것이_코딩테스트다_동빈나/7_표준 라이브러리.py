@@ -48,7 +48,7 @@ from itertools import product
 data = ['A', 'B', 'C'] # 데이터 준비
 
 result = list(product(data, repeat=2)) # 2개를 뽑는 모든 순열 구하기 (중복 허용)
-print(result)
+print(result) # [('A', 'A'), ('A', 'B'), ('A', 'C'), ('B', 'A'), ('B', 'B'), ('B', 'C'), ('C', 'A'), ('C', 'B'), ('C', 'C')]
 
 # 중복 조합
 from itertools import combinations_with_replacement
@@ -56,4 +56,15 @@ from itertools import combinations_with_replacement
 data = ['A', 'B', 'C'] # 데이터 준비
 
 result = list(combinations_with_replacement(data, 2)) # 2개를 뽑는 모든 조합 구하기 (중복 허용)
-print(result)
+print(result) # [('A', 'A'), ('A', 'B'), ('A', 'C'), ('B', 'B'), ('B', 'C'), ('C', 'C')]
+
+
+
+
+
+
+'''
+라이브러리를 거의 다 활용할 수 있게 해줌
+하지만 numpy 같은 건 쓸 수 없어 보통
+
+'''
